@@ -26,14 +26,18 @@ function manager() {
 
 const concierge = {
   observers: [],
-  subscribe: observer => concierge.observers.push(observer),
-  notify: message => concierge.observers.forEach(obs => obs(message)),
-  listen: async () => {
+  subscribe(observer) {
+    return this.observers.push(observer)
+  },
+  notify(message) {
+    return this.observers.forEach(obs => obs(message))
+  },
+  async listen() {
     while(true) {
       const response = await getResponse('O namorado chegou? (s/N/q) ')
   
       if (response.toLowerCase() === 's')
-        concierge.notify(response);
+        this.notify(response);
   
       if (response.toLowerCase() === 'q')
         break
