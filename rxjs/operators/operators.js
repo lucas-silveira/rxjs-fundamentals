@@ -1,6 +1,9 @@
 /*
 Os operadores do RxJs se dividem em duas categorias:
 Operadores de Criação e Operadores Encadeáveis (Pipeable Operators)
+
+Operadores de criação simplesmente criam observables
+Operadores encadeáveis iteram sobre os observables manipulando os dados
 */
 
 // Creation Operator
