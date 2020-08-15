@@ -1,4 +1,4 @@
-const { from, Observable, noop } = require('rxjs')
+const { Observable, from, noop } = require('rxjs')
 
 // com função
 function first() {
